@@ -23,7 +23,7 @@ public class MessageController : ControllerBase
         _IServiceMessage = iServiceMessage;
     }
 
-    [Authorize]
+    //[Authorize]
     [Produces("application/json")]
     [HttpPost("/api/Add")]
     public async Task<List<Notifies>> Add(MessageViewModel message)
@@ -89,6 +89,8 @@ public class MessageController : ControllerBase
 
     private async Task<string> RetornarIdUsuarioLogado()
     {
+        return "189c3eb4-ad93-41bd-8681-7cf954bcbd04";
+
         if (User != null)
         {
             var idUsuario = User.FindFirst("idUsuario");
